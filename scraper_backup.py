@@ -11,7 +11,7 @@ def collect_team_data(match_logs_url, team_name, max_retries=3):
     for attempt in range(max_retries):
         try:
             # Delay before each attempt
-            time.sleep(random.uniform(60, 65))
+            time.sleep(random.uniform(15, 20))
 
             # Make a manual request to check for 429 first
             response = requests.get(match_logs_url, headers=headers)
